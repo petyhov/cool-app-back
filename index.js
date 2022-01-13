@@ -25,8 +25,9 @@ function initMiddlewares() {
 }
 
 function initRoutes() {
-
-    
+  server.use("/", (res, req) => {
+    req.status(201).json("All works fine)");
+  });
 }
 
 async function connectDatabase(req, res) {}
